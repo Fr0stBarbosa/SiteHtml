@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: antiquewhite;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+    background-color: aqua;
+}
+
+.container a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.container a:hover{
+    cursor: pointer; 
+    color: yellow;
+}
+.menu{
+    margin: 10px;
+}
+.menu a{
+    margin: 10px;
+    margin-left: 20px;
+}
+.meio{
+    background-color: yellow;
+    padding: 23rem;
+    background-image: url(/imagens/fundo.avif);
+}
