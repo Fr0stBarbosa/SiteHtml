@@ -32,30 +32,62 @@ body{
     margin: 10px;
     margin-left: 20px;
 }
-/*Alterar a cor de fundo e a cor do texto do menu quando passar o mouse:*/
+.barra{
+    display: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.mobile-menu{
+    display: none;
+    flex-direction: column;
+    background-color: aqua;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    width: 150px;
+    text-align: center;
+    border: 1 solid blue;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 768px){
+    .menu{
+        display: none;
+    }
+    .barra{
+        display: block;
+    }
+    .mobile-menu{
+        display: none;
+    }
+    .mobile-menu.active{
+        display: flex;
+    }
+}
+/*Alterar a cor de fundo e a cor do texto do menu quando passar o mouse:
 .men a:hover{
     background-color: #333;
     color: #fff;
 }
-/*Adicionar margens para separar os itens do menu:*/
+/*Adicionar margens para separar os itens do menu:
 .men li{
     margin: 0 10px;
 }
-/*Alterar o estilo do texto do menu:*/
+/*Alterar o estilo do texto do menu:
 .men a{
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
 }
-/*Adicionar uma borda inferior ao item de menu quando passar o mouse:*/
+/*Adicionar uma borda inferior ao item de menu quando passar o mouse:
 .men a:hover{
     border-bottom: 2px solid #333;
 }
-/*Alinhar o menu ao centro:*/
+/*Alinhar o menu ao centro:
 .men ul{
     display: flex;
     justify-content: center;
-}
+}*/
 
 .meio{
     background-color: yellow;
@@ -95,7 +127,9 @@ body{
     background-size: cover;
     margin-top: 50px;
     display: flex;
-    justify-content: space-around;
+    /*Permite que as células quebrem para a próxima linha*/
+    flex-wrap: wrap;
+    justify-content: center;/*Centraliza as células horizontalmente*/
 }
 
 .cell img{
@@ -103,8 +137,14 @@ body{
     margin: 20px;
     text-align: center;
     padding: 40px;
+    box-sizing: border-box;/*Mantém a largura dentro do espaço da célula*/
 }
-
+/*Adicione regras de media query para ajustar o layout em diferentes tamanhos de tela*/
+@media(min-width: 768px){
+    .cell{
+        justify-content: space-around;/*Espaçamento entre as células em telas maiores*/
+}
+}
 .info{
     color: black;
     font-size: 20px;
@@ -121,5 +161,5 @@ body{
     background-color: aqua;
     padding: 60px;
     margin-top: 20px;
+    display: flex;;/*O uso do Flexbox oferece mais controle sobre o layout dos elementos:*/
 }
-

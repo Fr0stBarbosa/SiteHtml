@@ -6,26 +6,36 @@
         <link rel="shortcut icon" href="/imagens/icone.png" type="Planta">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/estilo/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.es.gov.br/fonts/font-awesome/css/font-awesome.min.css">
     </head>
     <body>
         <!--Começo do cabeçario-->
         <header class="container">
             <img src="imagens/tec.png" width="150" height="150" alt="Celular">
             <div class="menu">
-                <a href="">HOME</a>
+                <a href="index.html">HOME</a>
                 <a href="">EMPRESA</a>
                 <a href="">CONTATO</a>
             </div>
+            <div class="barra">
+                <i class="fa fa-bars"></i>
+            </div>
 <!--Vamos supor que você tenha o seguinte código HTML para a barra de menu:-->
-            <nav class="men">
+ <!-- Barra de menu -->
+            <!--<nav class="men">
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Sobre Nós</a></li>
                     <li><a href="#">Serviços</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
-            </nav>
+            </nav>-->
         </header>
+        <nav class="mobile-menu">
+            <a href="index.html">HOME</a>
+            <a href="">EMPRESA</a>
+            <a href="">CONTATO</a>
+        </nav>
         <!--Aqui fica o cabeçario-->
         <main class="meio">
             <div class="card">
@@ -56,10 +66,20 @@
                 <span id="botao">Saiba Mais</span>
         </section>
         <footer class="rodape">
-            <h6><img src="/imagens/face.png" alt="" width="20" height="20"><i img>Facebook</i></h6>
-            <h6><img src="/imagens/insta.jfif" alt="" width="20" height="20"><i>Instagram</i>
-            <h6><img src="/imagens/what.png" alt="" width="20" height="20"><i>Whatsapp</i></h6>
-            <h6><img src="/imagens/x.png" alt="" width="20" height="20"><i>X</i></h6>
+            <i class="fa fa-facebook"></i>Facebook
+            <i class="fa fa-instagram"></i>Instagram
+            <i class="fa fa-whatsapp"></i>Whatsapp
+            <i class="fa fa-twitter"></i>Twitter
         </footer>
+
+        <script>
+
+            const barra = document.querySelector('.barra')
+            const mobileMenu = document.querySelector('.mobile-menu')
+
+            barra.addEventListener('click',()=>{
+                mobileMenu.classList.toggle('active');
+            });
+        </script>
     </body>
 </html>
